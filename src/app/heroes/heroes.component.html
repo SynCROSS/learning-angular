@@ -13,7 +13,7 @@
   </li>
   <li [style.display]="hero?.type ? 'normal' : 'none'" class="flex">
     <h3>type:</h3>
-    <div>{{ hero?.type }}</div>
+    <div>{{ hero?.type?.join(" / ") }}</div>
   </li>
   <li [style.display]="hero?.effect ? 'normal' : 'none'">
     <h3>effect:</h3>
