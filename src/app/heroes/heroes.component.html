@@ -1,0 +1,36 @@
+<ul *ngFor="let hero of heroes" class="flex jc-center flex-dir-col">
+  <li [style.display]="hero?.name ? 'normal' : 'none'" class="flex">
+    <h3>name:</h3>
+    <div>{{ hero?.name }}</div>
+  </li>
+  <li [style.display]="hero?.element_type ? 'normal' : 'none'" class="flex">
+    <h3>element_type:</h3>
+    <div>{{ hero?.element_type }}</div>
+  </li>
+  <li [style.display]="hero?.level ? 'normal' : 'none'" class="flex">
+    <h3>level:</h3>
+    <div>{{ hero?.level }}</div>
+  </li>
+  <li [style.display]="hero?.type ? 'normal' : 'none'" class="flex">
+    <h3>type:</h3>
+    <div>{{ hero?.type }}</div>
+  </li>
+  <li [style.display]="hero?.effect ? 'normal' : 'none'">
+    <h3>effect:</h3>
+    <div>{{ hero?.effect }}</div>
+  </li>
+  <li [style.display]="hero?.text ? 'normal' : 'none'">
+    <h3>text:</h3>
+    <p>{{ hero?.text }}</p>
+  </li>
+  <li [style.display]="hero?.atk && hero?.def ? 'normal' : 'none'" class="flex">
+    <div class="atk">
+      <h3>atk</h3>
+      <div>{{ hero?.atk }}</div>
+    </div>
+    <div class="def">
+      <h3>def</h3>
+      <div>{{ hero?.def }}</div>
+    </div>
+  </li>
+</ul>
