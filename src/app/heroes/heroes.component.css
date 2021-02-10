@@ -1,15 +1,22 @@
-ul {
+ul > li {
+  list-style: none;
   width: 300px;
   height: 300px;
-  list-style: none;
   border-radius: 50px;
-  background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  background: #f8f8f8;
+  box-shadow: 20px 20px 60px #d3d3d3, -20px -20px 60px #ffffff;
   margin: 20px;
   padding: 20px;
+  transition: all 0.5s;
 }
 
-ul > li {
+ul > li.selected {
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+ul > li > div {
+  font-weight: bold;
   justify-content: space-between;
   align-items: baseline;
 }
