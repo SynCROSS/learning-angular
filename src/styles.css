@@ -26,3 +26,7 @@ body {
 .flex-dir-col {
   flex-direction: column;
 }
+
+.jc-spa-bet {
+  justify-content: space-between;
+}

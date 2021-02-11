@@ -62,7 +62,7 @@ export class HeroesComponent implements OnInit {
     },
     {
       id: 5,
-      name: '	Ｅ・ＨＥＲＯ バブルマン', // * Bubbleman
+      name: 'Ｅ・ＨＥＲＯ バブルマン', // * Bubbleman
       element_type: 'WATER',
       level: 4,
       type: ['Warrior', 'Effect'],
@@ -82,6 +82,7 @@ export class HeroesComponent implements OnInit {
   onSelect = (hero: Hero): void => {
     this.selectedHero = hero;
   };
+
   constructor() {}
 
   ngOnInit(): void {}

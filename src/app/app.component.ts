@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Yu-Gi-Oh! Elemental Heroes';
+  title = 'Yu-Gi-Oh!' + ' ' + 'Elemental Heroes';
 }
