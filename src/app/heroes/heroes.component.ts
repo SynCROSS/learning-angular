@@ -36,7 +36,7 @@ export class HeroesComponent implements OnInit {
     },
     {
       id: 3,
-      name: '	Ｅ・ＨＥＲＯ スパークマン', // * Sparkman
+      name: 'Ｅ・ＨＥＲＯ スパークマン', // * Sparkman
       element_type: 'LIGHT',
       level: 4,
       type: ['Warrior'],

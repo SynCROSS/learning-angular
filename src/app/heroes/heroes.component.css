@@ -1,7 +1,7 @@
 ul > li {
+  text-align: center;
   list-style: none;
-  width: 300px;
-  height: 300px;
+  width: 350px;
   border-radius: 50px;
   background: #f8f8f8;
   box-shadow: 20px 20px 60px #d3d3d3, -20px -20px 60px #ffffff;
@@ -15,8 +15,8 @@ ul > li.selected {
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
-ul > li > div {
-  font-weight: bold;
+ul > li > div > h1 {
+  font-size: 1.5rem;
   justify-content: space-between;
   align-items: baseline;
 }
