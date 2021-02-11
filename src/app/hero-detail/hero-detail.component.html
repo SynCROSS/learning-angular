@@ -1,0 +1,43 @@
+<div
+  *ngIf="hero"
+  class="flex jc-center ai-center flex-dir-col"
+  style="margin: 0 auto"
+>
+  <h2 id="hero.name">{{ hero.name }} Details</h2>
+  <div>
+    <strong class="flex ai-center jc-spa-bet"
+      ><h3>Name:</h3>
+      {{ hero.name }}
+    </strong>
+    <strong class="flex ai-center jc-spa-bet"
+      ><h3>Element Type:</h3>
+      {{ hero.element_type }}
+    </strong>
+    <strong class="flex ai-center jc-spa-bet"
+      ><h3>Level:</h3>
+      {{ hero.level }}
+    </strong>
+    <strong class="flex ai-center jc-spa-bet"
+      ><h3>Type:</h3>
+      {{ hero.type.join(" / ") }}
+    </strong>
+    <strong *ngIf="hero.effect"
+      ><h3>Effect:</h3>
+      <p>{{ hero.effect }}</p>
+    </strong>
+    <strong *ngIf="hero.text"
+      ><h3>Flavor Text:</h3>
+      <p>{{ hero.text }}</p>
+    </strong>
+    <strong class="flex ai-center jc-spa-bet">
+      <div class="atk">
+        <h3>Atk:</h3>
+        {{ hero.atk }}
+      </div>
+      <div class="def">
+        <h3>Def:</h3>
+        {{ hero.def }}
+      </div>
+    </strong>
+  </div>
+</div>
