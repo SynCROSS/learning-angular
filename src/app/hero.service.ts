@@ -2,14 +2,16 @@ import { Injectable } from '@angular/core';
 import { Heroes } from './heroes/heroes';
 import { Hero } from './heroes/hero';
 import { Observable, of } from 'rxjs';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HeroService {
-  constructor() {}
+  constructor(private MessageService: MessageService) {}
 
   getHeroes(): Observable<Hero[]> {
+    this.MessageService.addMessage('Message is sended successfully!');
     return of(Heroes);
   }
 }
