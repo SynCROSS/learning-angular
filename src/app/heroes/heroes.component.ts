@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
-import { Heroes } from './heroes';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -8,15 +8,22 @@ import { Heroes } from './heroes';
   styleUrls: ['./heroes.component.css'],
 })
 export class HeroesComponent implements OnInit {
-  heroes = Heroes;
+  heroes: Hero[] | undefined;
 
   selectedHero: Hero | undefined;
+
+  constructor(private HeroService: HeroService) {}
 
   onSelect = (hero: Hero): void => {
     this.selectedHero = hero;
   };
 
-  constructor() {}
+  getHeroes = (): void => {
+    // * Assigning a value to a variable is worked synchronously. But 'Observable' is NOT.
+    this.HeroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
+  };
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getHeroes();
+  }
 }
