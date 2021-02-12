@@ -8,11 +8,10 @@
     <div class="name" *ngIf="hero.name">
       <h1>{{ hero.name }}</h1>
     </div>
+    <app-hero-detail
+      style="text-align: justify"
+      *ngIf="selectedHero === hero"
+      [hero]="selectedHero"
+    ></app-hero-detail>
   </li>
 </ul>
-
-<app-hero-detail
-  style="width: 400px"
-  *ngIf="selectedHero"
-  [hero]="selectedHero"
-></app-hero-detail>
