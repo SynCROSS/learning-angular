@@ -1,0 +1,21 @@
+* {
+  width: 100%;
+}
+
+.top {
+  box-shadow: 0 0 2px 2px #ccc;
+  justify-content: space-between;
+  padding: 7px 10px;
+}
+.top > .clear {
+  width: auto;
+  padding: 5px 10px;
+  border: none;
+}
+.message {
+  background-color: #333;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 100;
+  padding: 10px 15px;
+}

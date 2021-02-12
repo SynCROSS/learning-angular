@@ -8,7 +8,7 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heroes.component.css'],
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[] | undefined;
+  heroes: Hero[] = [];
 
   selectedHero: Hero | undefined;
 
