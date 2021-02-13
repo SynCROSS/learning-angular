@@ -1,17 +1,22 @@
-<ul class="flex jc-center flex-dir-col">
-  <li
-    *ngFor="let hero of heroes"
-    class="flex jc-center flex-dir-col"
-    [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)"
-  >
-    <div class="name" *ngIf="hero.name">
-      <h1>{{ hero.name }}</h1>
-    </div>
-    <app-hero-detail
-      style="text-align: justify"
-      *ngIf="selectedHero === hero"
-      [hero]="selectedHero"
-    ></app-hero-detail>
-  </li>
-</ul>
+<div
+  class="flex jc-center ai-center flex-dir-col"
+  style="flex-wrap: wrap; min-height: 100%; flex: 1 0 auto"
+>
+  <ul class="flex jc-center flex-dir-col">
+    <li
+      *ngFor="let hero of heroes"
+      class="flex jc-center flex-dir-col"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)"
+    >
+      <div class="name" *ngIf="hero.name">
+        <h1>{{ hero.name }}</h1>
+      </div>
+      <app-hero-detail
+        style="text-align: justify"
+        *ngIf="selectedHero === hero"
+        [hero]="selectedHero"
+      ></app-hero-detail>
+    </li>
+  </ul>
+</div>
