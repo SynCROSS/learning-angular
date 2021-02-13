@@ -1,0 +1,8 @@
+<div class="main-content">
+  <h1 class="title">Top Heroes</h1>
+  <div class="grid grid-pad flex ai-center jc-center flex-dir-col">
+    <a *ngFor="let hero of heroes" class="column item">
+      <h2>{{ hero.name }}</h2>
+    </a>
+  </div>
+</div>
