@@ -1,11 +1,8 @@
-<div
-  class="flex jc-center ai-center flex-dir-col"
-  style="flex-wrap: wrap; min-height: 100%; flex: 1 0 auto"
->
+<div class="flex jc-center ai-center flex-dir-col main-content">
   <ul class="flex jc-center flex-dir-col">
     <li
       *ngFor="let hero of heroes"
-      class="flex jc-center flex-dir-col"
+      class="flex jc-center flex-dir-col item"
       [class.selected]="hero === selectedHero"
       (click)="onSelect(hero)"
     >
