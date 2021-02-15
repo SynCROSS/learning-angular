@@ -1,19 +1,10 @@
-<div class="flex jc-center ai-center flex-dir-col main-content">
-  <ul class="flex jc-center flex-dir-col">
-    <li
-      *ngFor="let hero of heroes"
-      class="flex jc-center flex-dir-col item"
-      [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)"
-    >
-      <div class="name" *ngIf="hero.name">
+<div class="flex jc-center ai-center flex-dir-col">
+  <h1 class="title">Heroes List</h1>
+  <ul class="flex jc-center flex-dir-col main-content">
+    <li *ngFor="let hero of heroes" class="flex jc-center flex-dir-col item">
+      <a class="name" routerLink="/detail/{{ hero.id }}" *ngIf="hero.name">
         <h1>{{ hero.name }}</h1>
-      </div>
-      <app-hero-detail
-        style="text-align: justify"
-        *ngIf="selectedHero === hero"
-        [hero]="selectedHero"
-      ></app-hero-detail>
+      </a>
     </li>
   </ul>
 </div>

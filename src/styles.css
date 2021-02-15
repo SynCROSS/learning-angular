@@ -16,6 +16,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 .flex {
@@ -46,6 +47,7 @@ a {
 
 .item {
   text-align: center;
+  color: #444;
   width: 350px;
   border-radius: 50px;
   background: #f8f8f8;
@@ -55,8 +57,8 @@ a {
   transition: all 0.5s;
 }
 
-.selected,
 .item:hover {
+  color: #000;
   background: #ffffff;
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }

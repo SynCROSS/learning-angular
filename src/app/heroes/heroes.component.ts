@@ -10,13 +10,7 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
 
-  selectedHero: Hero | undefined;
-
   constructor(private HeroService: HeroService) {}
-
-  onSelect = (hero: Hero): void => {
-    this.selectedHero = hero;
-  };
 
   getHeroes = (): void => {
     // * Assigning a value to a variable is worked synchronously. But 'Observable' is NOT.

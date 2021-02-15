@@ -2,8 +2,13 @@ ul > li {
   list-style: none;
 }
 
-ul > li > div > h1 {
+ul > li > .name > h1 {
   font-size: 1.5rem;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.title {
+  text-align: center;
+  margin: 20px auto;
 }
