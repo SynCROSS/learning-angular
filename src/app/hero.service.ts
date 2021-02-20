@@ -17,14 +17,17 @@ export class HeroService {
 
   private heroesUrl = 'api/heroes';
 
-  printLog(message: string): void {
+  sendLog(message: string): void {
     this.MessageService.addMessage(`HeroService: ${message}`);
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
+  private handleError<T>(
+    operation = 'operation',
+    result?: T
+  ): (error: any) => Observable<T> {
     return (error: any): Observable<T> => {
       console.error(error);
-      this.printLog(`${operation} failed: ${error.message}`);
+      this.sendLog(`${operation} failed: ${error.message}`);
       return of(result as T);
     };
   }
@@ -32,6 +35,7 @@ export class HeroService {
   getHeroes(): Observable<Hero[]> {
     this.MessageService.addMessage('Message is sended successfully!');
     return this.HttpClient.get<Hero[]>(this.heroesUrl).pipe(
+      tap((_) => this.sendLog('Fetched Heroes')),
       catchError(this.handleError<Hero[]>('getHeroes()', []))
     );
   }
